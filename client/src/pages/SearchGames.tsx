@@ -31,7 +31,7 @@ const SearchGames: FC = () => {
         
         // const url = `https://data.ncaa.com/casablanca/scoreboard/basketball-men/d1/${year}/${month}/${day}/scoreboard.json`;
         // const url = `https://data.ncaa.com/casablanca/scoreboard/basketball-men/d1/2025/04/07/scoreboard.json`;
-        const url = `http://localhost:3001/api/games/mens/test`
+        const url = `/api/games/mens/test`
 
         const response = await fetch(url,{
             method: "GET",

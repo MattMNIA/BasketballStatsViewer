@@ -1,24 +1,19 @@
 version: '3.8'
 
 services:
-  nginx:
+  client:
     build:
       context: ./client
-      dockerfile: Dockerfile
     ports:
       - "80:80"
     depends_on:
       - server
     networks:
       - app-network
-    volumes:
-      - ./nginx/basketball.conf:/etc/nginx/conf.d/default.conf
 
   server:
     build:
       context: ./server
-      dockerfile: Dockerfile
-    container_name: basketball_server
     networks:
       - app-network
     environment:

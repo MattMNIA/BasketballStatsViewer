@@ -201,7 +201,7 @@ const GameStats: React.FC<GameStatsProps> = ({ gameId }) => {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const response = await fetch(`http://localhost:3001/api/stats/game/${gameId}/boxscore`);
+                const response = await fetch(`/api/stats/game/${gameId}/boxscore`);
                 const data = await response.json();
                 setStats(data);
                 setLoading(false);
