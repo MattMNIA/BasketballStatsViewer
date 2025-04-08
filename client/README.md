@@ -1,0 +1,1 @@
+The goal of this project is to display individial and team stats for NCAA basketball games.
